@@ -1,5 +1,5 @@
 <?php echo head(array('bodyid'=>'home')); ?>
-
+<div class="container">
 <?php echo get_theme_option('Homepage About'); ?>
 <div class="row">
     <div class="col-sm-4">
@@ -29,5 +29,5 @@
     
     <?php fire_plugin_hook('public_home', array('view' => $this)); ?>
 </div>
-
+</div>
 <?php echo foot(); ?>

@@ -113,6 +113,32 @@ input#query {width:90px;}
 
 a.dropdown-toggle {white-space: nowrap;}
 
+/* SIMPLE PAGE THEMING */
+
+.post-meta {
+	width:330px;
+   
+    height:100%;
+   
+}
+
+.post-meta h2 {
+	color:#333333;
+	font-family: 'YaleDesign';
+	text-align: right;
+	margin-right:35px;
+}
+
+.post-content p {
+
+	position:relative;
+	font-family: 'InterstateLight';
+}
+
+/*  TEMPORARY so we can figure out the blog post logic */
+div.content-wrapper, div.inner-content, div.post, div.post-meta, div.post-content {
+	border:1px dotted green;
+}
 
 footer {
 	background-color:#333333;
@@ -175,6 +201,8 @@ div.yul-wordmark span.yul-wordmark-italic {
 @font-face {font-family: 'Text-Regular';src: url('fonts/text.eot');src: url('fonts/text.eot?#iefix') format('embedded-opentype'),url('fonts/text.woff2') format('woff2'),url('fonts/text.woff') format('woff'),url('fonts/text.ttf') format('truetype');}
 
 @font-face {font-family: 'InterstateBoldCondensed';src: url('fonts/Interstate-BoldCondensed.eot');src: url('fonts/Interstate-BoldCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-BoldCondensed.ttf') format('truetype');}
+
+@font-face {font-family: 'InterstateLight';src: url('fonts/Interstate-Light.eot');src: url('fonts/Interstate-Light.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Light.ttf') format('truetype');}
 
 @font-face {font-family: 'InterstateLightCondensed';src: url('fonts/Interstate-LightCondensed.eot');src: url('fonts/Interstate-LightCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-LightCondensed.ttf') format('truetype');}
 

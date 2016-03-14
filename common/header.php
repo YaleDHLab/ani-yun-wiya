@@ -72,7 +72,7 @@
 					            <li><a href="#">Asakawa</a></li>
 					          </ul>
 					        </li>
-					        <li><a href="#">About</a></li>
+					        <li><a href="about">About</a></li>
 <!-- 					        <li><a href="#">Dashboard</a></li> -->
 					        <li><a href="#">Login</a></li>
 					        <li>
@@ -89,14 +89,13 @@
 			  
 		</nav>	    
 	    
-        <div class="container" style="border:dotted 1px red;">
-            <h5 class="text-center"><?php echo __('public_header goes here. what will it be?'); ?></h5>
+        <div class="container">
+            <h5 class="text-center"><?php echo __('public_header'); ?></h5>
 
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>            
         </div>
     </header>
     <main id="content" role="main">
-      <div class="container" style="border:dotted 1px red;">
-            <h5 class="text-center"><?php echo __('public_content_top goes here. This is the main area.?'); ?></h5>
-
+    
           <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
+		  

@@ -7,3 +7,6 @@
 *.woff2
 *.eot
 *.svg
+# OS X Cruft #
+###########
+.DS_Store

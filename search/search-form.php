@@ -1,7 +1,7 @@
 <?php echo $this->form('search-form', $options['form_attributes']); ?>
     <div class="form-group">
-        <?php echo $this->formText('query', $filters['query'], array('class'=>'form-control', 'placeholder'=>'Search the collection')); ?>
-        <button type="submit" class="btn btn-default">Search</button>
+        <?php echo $this->formText('query', $filters['query'], array('class'=>'form-control', 'placeholder'=>'Search')); ?>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
     </div>
     <?php if ($options['show_advanced']): ?>
         <fieldset id="advanced-form">

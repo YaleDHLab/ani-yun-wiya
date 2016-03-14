@@ -41,33 +41,62 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header role="banner">
-        <div class="container">
-            <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-            <h1 class="site-title text-center"><?php echo link_to_home_page(theme_logo()); ?></h1>
-            <h5 class="text-center"><?php echo __('A Sample Omeka Theme'); ?></h5>
+		<nav class="navbar">
+		  <div class="container-fluid">
+			  <div class="row">
+			    <div class="navbar-header" role="navigation">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#transcribeNavbar">
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>                        
+						</button>
+						
+						<div id="header-allbox" class="pull-left">
+							<div id="header-dhlabbox">
+							    <div id="header-dhlabbox-dh">DH</div>
+							    <div id="header-dhlabbox-lab">Lab</div>
+							</div>
+							<div id="header-transcribebox" >
+							    <?php echo link_to_home_page("Transcribe"); ?>
+							</div>
+							
+						</div>
+
+						</div>
+					    <div class="collapse navbar-collapse" id="transcribeNavbar">
+					      <ul class="nav nav-justified">
+					        <li class="dropdown">
+					          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Collections&nbsp;<span class="caret"></span></a>
+					          <ul class="dropdown-menu">
+					            <li><a href="#">Cherokee</a></li>
+					            <li><a href="#">Asakawa</a></li>
+					          </ul>
+					        </li>
+					        <li><a href="#">About</a></li>
+<!-- 					        <li><a href="#">Dashboard</a></li> -->
+					        <li><a href="#">Login</a></li>
+					        <li>
+						        <form  class="navbar-form" role="search" action="<?php echo public_url(''); ?>search">
+									<?php echo search_form(array('show_advanced' => false, 'submit_value' => 'I Feel Lucky')); ?>
+								</form>
+					        </li>
+			
+					      </ul>
+
+					    </div>
+			  </div>
+			  </div>
+			  
+		</nav>	    
+	    
+        <div class="container" style="border:dotted 1px red;">
+            <h5 class="text-center"><?php echo __('public_header goes here. what will it be?'); ?></h5>
+
+            <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>            
         </div>
-
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-navigation">
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="collapse navbar-collapse" id="primary-navigation">
-                    <?php echo public_nav_main_bootstrap(); ?>
-
-                    <form class="navbar-form navbar-right" role="search" action="<?php echo public_url(''); ?>search">
-                        <?php echo search_form(array('show_advanced' => false)); ?>
-                    </form>
-                </div>
-            </div>
-        </nav>
     </header>
     <main id="content" role="main">
-      <div class="container">
+      <div class="container" style="border:dotted 1px red;">
+            <h5 class="text-center"><?php echo __('public_content_top goes here. This is the main area.?'); ?></h5>
+
           <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>

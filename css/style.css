@@ -3,3 +3,179 @@
 img {
     max-width: 100%;
 }
+
+body {background-color:#ECECEC;}
+.navbar {
+	border-radius: 0;
+	border:0;
+	background-color:white;
+	height:70px;
+	}
+
+
+
+/* .row {margin-left:0;}	 */
+.navbar .navbar-toggle .icon-bar {
+	background-color:black;
+	}
+	
+.navbar .navbar-toggle {
+	border-color:black;
+}
+
+div#header-dhlabbox {
+	height:70px;
+	 width:70px;float:left;background-color:#404040;
+	font-family: Text-Regular;
+	font-size:1.6em;
+	text-rendering: optimizeLegibility;
+	position:relative;
+}
+
+div#header-allbox {
+	width:330px;
+	height:70px;
+}
+
+div#header-transcribebox {
+	width:260px;
+	height:70px;
+	float:left;background-color:#F6A947;
+	line-height: 70px;
+	margin-top:0;
+	margin-bottom:0;
+	font-size:2.8em;
+	text-align: center;
+}
+
+div#header-transcribebox a {
+
+	font-family: Text-Regular;
+	text-decoration: none;
+	color:white;
+	text-rendering: optimizeLegibility;
+
+}
+
+div#header-dhlabbox-dh {
+	color:white;
+	position:absolute;
+	top:17px;
+	left:13px;
+	z-index: 2;	
+}
+
+div#header-dhlabbox-lab {
+	color:#F6A947;
+	position:absolute;
+	top:29px;
+	left:19px;
+	z-index: 1;
+}
+
+
+.navbar li, .navbar li a {
+	font-family: "InterstateBoldCondensed";
+	color:black;
+	font-size:1.125em;
+	text-transform: uppercase;
+	height:70px;
+	line-height:55px;
+}
+
+.navbar li form {
+	line-height:0;
+	margin:0;
+	padding:0;
+	position:relative;
+	top:-1px;
+}
+
+
+
+.navbar li div.form-group {
+	width:135px;
+}
+
+input#query {width:90px;}
+
+
+
+.dropdown-menu li, .dropdown-menu li a {
+	font-family: "InterstateRegular";
+	color:black;
+	font-size:1.125em;
+	height:55px;
+	line-height:55px;
+	text-transform:none;
+	}
+.navbar-toggle {margin-top:18px;}
+
+a.dropdown-toggle {white-space: nowrap;}
+
+
+footer {
+	background-color:#333333;
+	color:white;
+	height:120px;
+}
+
+div.yul-wordmark {	
+	text-rendering: optimizeLegibility;
+	line-height:normal;
+	
+}
+div.yul-wordmark span.yul-wordmark-smallcap {
+    font-family: 'YaleDesign-SmallCap', Georgia, "Times New Roman", Times, serif;
+    text-transform: uppercase;
+}
+
+div.yul-wordmark span.yul-wordmark-yale {
+    font-family: 'YaleDesign', Georgia, "Times New Roman", Times, serif;
+    font-size: 23px;
+}
+
+div.yul-wordmark span.yul-wordmark-italic {
+    font-family: 'YaleDesign', Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	margin-top:0;
+
+}
+
+@font-face {
+    font-family: 'YaleDesign';
+    src: url(fonts/yaledesign-medium-webfont.eot);
+    src: url(fonts/yaledesign-medium-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/yaledesign-medium-webfont.woff) format('woff'), url(fonts/yaledesign-medium-webfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'YaleDesign';
+  src: url("fonts/yaledesign-italic-webfont.eot");
+  src: url("fonts/yaledesign-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/yaledesign-italic-webfont.ttf") format("truetype"), url("fonts/yaledesign-italic-webfont.woff") format("woff");
+  font-style: italic;
+  font-weight: normal;
+}
+
+
+
+@font-face {
+    font-family: 'YaleDesign-SmallCap';
+    src: url(fonts/yaledessmacap-webfont.eot);
+    src: url(fonts/yaledessmacap-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/yaledessmacap-webfont.woff) format('woff'), url(fonts/yaledessmacap-webfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("//hello.myfonts.net/count/2f830c");
+
+@font-face {font-family: 'Text-Regular';src: url('fonts/text.eot');src: url('fonts/text.eot?#iefix') format('embedded-opentype'),url('fonts/text.woff2') format('woff2'),url('fonts/text.woff') format('woff'),url('fonts/text.ttf') format('truetype');}
+
+@font-face {font-family: 'InterstateBoldCondensed';src: url('fonts/Interstate-BoldCondensed.eot');src: url('fonts/Interstate-BoldCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-BoldCondensed.ttf') format('truetype');}
+
+@font-face {font-family: 'InterstateLightCondensed';src: url('fonts/Interstate-LightCondensed.eot');src: url('fonts/Interstate-LightCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-LightCondensed.ttf') format('truetype');}
+
+@font-face {font-family: 'InterstateRegular';src: url('fonts/Interstate-Regular.eot');src: url('fonts/Interstate-Regular.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Regular.ttf') format('truetype');}

@@ -1,4 +1,4 @@
-# Ani-yun-wiya | ᎠᏂᏴᏫᏯ T
+# Ani-yun-wiya | ᎠᏂᏴᏫᏯ 
 A theme for Omeka 2.x, based on Interactive Mechanics’ Omeka Starter Theme.
 
 ## Fonts

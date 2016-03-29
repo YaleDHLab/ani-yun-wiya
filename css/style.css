@@ -94,6 +94,16 @@ div#header-dhlabbox-lab {
 	line-height:55px;
 }
 
+.navbar li, .navbar li a {
+	font-family: "InterstateBoldCondensed";
+	color:black;
+	font-size:1.125em;
+	text-transform: uppercase;
+	height:70px;
+	line-height:55px;
+}
+
+
 .navbar li form {
 	line-height:0;
 	margin:0;
@@ -102,6 +112,10 @@ div#header-dhlabbox-lab {
 	top:-1px;
 }
 
+.navbar li a:hover {
+
+	background-color:#f6a947;
+}
 
 
 .navbar li div.form-group {
@@ -119,7 +133,19 @@ input#query {width:90px;}
 	height:55px;
 	line-height:55px;
 	text-transform:none;
+}
+
+@media (min-width: 767px) {
+	.dropdown-menu {
+
+		margin: 0;
+		width:100%;
+		border: none;
+		border-radius: 0px;
+	
 	}
+}
+	
 .navbar-toggle {margin-top:18px;}
 
 a.dropdown-toggle {white-space: nowrap;}
@@ -159,6 +185,7 @@ div.calltoactionbox p {
 	font-size:14px;
 	text-align: justify;
 }
+
 
 
 /* SIMPLE PAGE THEMING */

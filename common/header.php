@@ -24,13 +24,25 @@
     <?php
         queue_css_file('lib/bootstrap.min');
         queue_css_file('style');
+         
+    
+
+        queue_css_file('supersized');
+
         echo head_css();
     ?>
 
     <!-- Need more JavaScript files? Include them here -->
     <?php
+        queue_js_file('vendor/jquery-1.11.1.min'); 
+        queue_js_file('vendor/jquery-ui.min');
         queue_js_file('lib/bootstrap.min');
         queue_js_file('globals');
+        queue_js_file('vendor/supersized.3.2.7.min');
+		queue_js_file('vendor/jquery.smoothZoom'); 	
+		queue_js_file('vendor/modernizr.custom');
+        
+
         echo head_js();
     ?>
     <!--[if lt IE 9]>
@@ -68,17 +80,24 @@
 					        <li class="dropdown">
 					          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Collections&nbsp;<span class="caret"></span></a>
 					          <ul class="dropdown-menu">
-					            <li><a href="#">Cherokee</a></li>
-					            <li><a href="#">Asakawa</a></li>
+					            <li><a href="<?php echo WEB_ROOT; ?>/collections/show/2">Cherokee</a></li>
+		
 					          </ul>
 					        </li>
-					        <li><a href="about">About</a></li>
+					        <li><a href="<?php echo WEB_ROOT; ?>/about">About</a></li>
 <!-- 					        <li><a href="#">Dashboard</a></li> -->
-					        <li><a href="#">Login</a></li>
 					        <li>
-						        <form  class="navbar-form" role="search" action="<?php echo public_url(''); ?>search">
+					        <?php if (!current_user()) { ?>
+					        	<a href="<?php echo WEB_ROOT; ?>/guest-user/user/login">Login</a>
+					        <?php }; ?>
+					        <?php if (current_user()) { ?>
+					        	<a href="<?php echo WEB_ROOT; ?>/users/logout">Logout</a>
+					        <?php }; ?>
+					        </li>
+					        <li>
+						        <div  class="navbar-form" >
 									<?php echo search_form(array('show_advanced' => false, 'submit_value' => 'I Feel Lucky')); ?>
-								</form>
+								</div>
 					        </li>
 			
 					      </ul>
@@ -89,11 +108,12 @@
 			  
 		</nav>	    
 	    
-        <div class="container">
-            <h5 class="text-center"><?php echo __('public_header'); ?></h5>
+<!--
+        <div class="container" >
 
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>            
         </div>
+-->
     </header>
     <main id="content" role="main">
     

@@ -4,12 +4,17 @@ img {
     max-width: 100%;
 }
 
-body {background-color:#ECECEC;}
+body {background-color:#ECECEC;
+
+
+}
 .navbar {
 	border-radius: 0;
 	border:0;
 	background-color:white;
 	height:70px;
+	margin-bottom:0;
+	
 	}
 
 
@@ -25,9 +30,11 @@ body {background-color:#ECECEC;}
 
 div#header-dhlabbox {
 	height:70px;
-	 width:70px;float:left;background-color:#404040;
+	width:70px;
+	float:left;
+	background-color:#404040;
 	font-family: Text-Regular;
-	font-size:1.6em;
+	font-size:1.7em;
 	text-rendering: optimizeLegibility;
 	position:relative;
 }
@@ -41,7 +48,7 @@ div#header-transcribebox {
 	width:260px;
 	height:70px;
 	float:left;background-color:#F6A947;
-	line-height: 70px;
+	line-height: 75px;
 	margin-top:0;
 	margin-bottom:0;
 	font-size:2.8em;
@@ -60,7 +67,7 @@ div#header-transcribebox a {
 div#header-dhlabbox-dh {
 	color:white;
 	position:absolute;
-	top:17px;
+	top:15px;
 	left:13px;
 	z-index: 2;	
 }
@@ -68,7 +75,7 @@ div#header-dhlabbox-dh {
 div#header-dhlabbox-lab {
 	color:#F6A947;
 	position:absolute;
-	top:29px;
+	top:27px;
 	left:19px;
 	z-index: 1;
 }
@@ -115,38 +122,296 @@ a.dropdown-toggle {white-space: nowrap;}
 
 /* SIMPLE PAGE THEMING */
 
-.post-meta {
-	width:330px;
-   
-    height:100%;
-   
-}
 
-.post-meta h2 {
+body.simple-page  h2 {
 	color:#333333;
 	font-family: 'YaleDesign';
-	text-align: right;
-	margin-right:35px;
+	text-align:center;
 }
 
-.post-content p {
+body.simple-page div.row {
 
-	position:relative;
 	font-family: 'InterstateLight';
 }
 
-/*  TEMPORARY so we can figure out the blog post logic */
-div.content-wrapper, div.inner-content, div.post, div.post-meta, div.post-content {
-	border:1px dotted green;
+
+/* Collapsing / deleting items at very small screen sizes */
+
+@media (max-width: 767px) {
+		div#footerPOTYDHL {
+			display:none;
+		}
+	}
+	
+	
+
+/* FOOTER STUFF */
+
+    
+html {
+  position: relative;
+  min-height: 100%;
 }
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 120px;
+}
+
+/* Hide the footer on transcripton pages */
+body#trancription footer {
+	display:none;
+}
+
 
 footer {
 	background-color:#333333;
 	color:white;
 	height:120px;
+	position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 120px;
+  padding-top:45px;
+	
 }
 
+div#footerPOTYDHL {
+	font-family:InterstateLightCondensed; font-size:16px;
+	text-align:right;
+	padding-right:70px;
+}
+
+
+/* COLLECTION VIEW */
+.main {padding-left:330px;
+
+
+}
+
+
+div.collectionTitle {
+	width:330px;
+	float:left; 
+	padding-right:30px;
+	padding-left:30px;
+
+}
+
+.collectionTitle h1 {
+	font-family: "YaleDesign";
+	font-size:1.5em;
+	text-align:right;
+	margin-top:20px;
+	line-height:1.5em;
+
+}
+
+div.collectionDesc {
+	font-family: "InterstateLight";
+	font-size:1.1em;
+	line-height:1.5em;
+	margin-top:25px;
+	padding-right:40px;
+	margin-bottom:20px;
+}
+
+div#collectionProgress {
+		width:95%;
+		height:10px;
+		border-radius: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		background:#fff;
+}
+
+div.item-progress {
+	margin-bottom:0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background:#626262;
+	height:10px;
+}
+
+.progress-bar {
+	background-color:#f6a947;
+	box-shadow: none;
+}
+
+div#pageshavebeen {
+	text-align:right;
+	font-family: "InterstateLight";
+	font-size:14px;
+	color:#999999;
+		line-height: 1em;
+}
+
+
+
+div.header-gradient {
+	background:linear-gradient(#ececec, #ffffff);
+	-webkit-linear-gradient(#ececec, #ffffff);
+
+}
+
+
+#columns {
+	width: 90%;
+	margin: 30px auto;
+}
+
+div.section-title {
+	padding-bottom:20px;
+}
+
+div.section-title div.row {
+	margin-right:50px;
+}
+div#columns figcaption {
+	color:#666666;
+	padding:19px;
+	background-color:#ffffff;
+	font-family:InterstateLight;
+	font-size:12px;
+	line-height: normal;
+}
+
+div#columns figcaption h3, div#columns figcaption h3 a {
+	font-family: InterstateBold;
+	font-size:16px;
+	margin-top:0;
+	color:#666666;
+	text-decoration: none;
+
+	
+}
+
+div#columns figure:hover figcaption h3, div#columns figure:hover figcaption h3 a {
+	color:#000000;
+} 
+
+
+
+div#columns figure {
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	column-break-inside: avoid;
+	display: inline-block;
+}
+
+div.masonryrow {
+ column-width: 250px;
+ -moz-column-width: 250px;
+ -webkit-column-width: 250px;
+ column-gap: 1em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em; 
+ column-fill: auto;
+}
+
+.masonrywell {
+ position:relative;
+ display: block;
+}
+
+div.thumbholder{
+	background-color:#000;
+	padding:19px;
+	padding-bottom:14px;
+	position: relative;
+}
+
+div.hoverMeta {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	background:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+	height:80px;
+	padding-top:45px;
+	padding-left:20px;
+	font-family:InterstateLight;
+	color:white;
+	display:none;
+	line-height: normal;
+}
+
+div.hoverEdit {
+	position:absolute;
+	top:0;
+	left:0;
+	border-radius: 4px;
+	margin-top:15px;
+	text-align: center;
+	vertical-align: middle;
+	margin-left:20px;
+	width:40px;
+	height:40px;
+	background-color:#f6a947;
+	color:white;
+	display:none;
+	-webkit-box-shadow: 1px 1px #000000;
+	-moz-box-shadow: 1px 1px #000000;
+	box-shadow: 1px 1px #000000;
+
+}
+
+div.hoverEdit .glyphicon { 
+	line-height: 40px;
+	font-size: large;
+}
+
+div.hoverMeta .glyphicon { 
+	width: 17px;
+	line-height:8px;
+} 
+
+
+div#columns figure:hover div.hoverMeta, div#columns figure:hover div.hoverEdit{
+	display:block;
+	pointer-events: none;
+
+}
+
+div#columns figure img {
+	width: 100%;
+	height: auto;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+/* ITEM VIEW */
+
+div.collectionTitleToItem {
+	padding-left:90px;
+
+
+
+}
+
+.collectionTitleToItem h1, .collectionTitleToItem h1 a {
+	font-family: "InterstateLight";
+	font-size:16px;
+	margin-top:15px;
+	line-height:1.5em;
+	color:#515151;
+	text-decoration: none;
+}
+
+.collectionTitleToItem h1 a:hover {
+	text-decoration: underline;
+}
+
+.collectionTitleToItem h1 strong {
+	font-family: "InterstateBold";
+	font-weight:normal;
+}
+
+/* FONTS */
+
 div.yul-wordmark {	
+
 	text-rendering: optimizeLegibility;
 	line-height:normal;
 	
@@ -154,19 +419,26 @@ div.yul-wordmark {
 div.yul-wordmark span.yul-wordmark-smallcap {
     font-family: 'YaleDesign-SmallCap', Georgia, "Times New Roman", Times, serif;
     text-transform: uppercase;
+    font-size:16px;
+
 }
 
 div.yul-wordmark span.yul-wordmark-yale {
     font-family: 'YaleDesign', Georgia, "Times New Roman", Times, serif;
-    font-size: 23px;
+    font-size: 26px;
+   
+
 }
 
 div.yul-wordmark span.yul-wordmark-italic {
     font-family: 'YaleDesign', Georgia, "Times New Roman", Times, serif;
 	font-style:italic;
-	margin-top:0;
+
+	font-size:17px;
 
 }
+
+
 
 @font-face {
     font-family: 'YaleDesign';
@@ -202,8 +474,18 @@ div.yul-wordmark span.yul-wordmark-italic {
 
 @font-face {font-family: 'InterstateBoldCondensed';src: url('fonts/Interstate-BoldCondensed.eot');src: url('fonts/Interstate-BoldCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-BoldCondensed.ttf') format('truetype');}
 
+@font-face {font-family: 'InterstateBold';src: url('fonts/Interstate-Bold.eot');src: url('fonts/Interstate-Bold.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Bold.ttf') format('truetype');}
+
+
 @font-face {font-family: 'InterstateLight';src: url('fonts/Interstate-Light.eot');src: url('fonts/Interstate-Light.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Light.ttf') format('truetype');}
 
 @font-face {font-family: 'InterstateLightCondensed';src: url('fonts/Interstate-LightCondensed.eot');src: url('fonts/Interstate-LightCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-LightCondensed.ttf') format('truetype');}
 
 @font-face {font-family: 'InterstateRegular';src: url('fonts/Interstate-Regular.eot');src: url('fonts/Interstate-Regular.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Regular.ttf') format('truetype');}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+

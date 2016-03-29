@@ -40,8 +40,6 @@
 		    </div>
 		</div>
 	</div>
-</div>
-
 	<div class="collectionTitle" id="pageshavebeen"></div>
 	<div class="main">
 	    <div class="container-fluid">
@@ -50,12 +48,10 @@
 	        </div>
 	    </div>
 	</div>	
-
-<div id="columns" class="container">
-
-<div class="masonryrow">
+</div>
 
 
+<div id="columns">
 <?php $totalFiles = 0; //Will hold number of files in collection
 	$fileProgress = 0; //Will hold of files completed
 	$total_needs_review = 0; //Will hold total percent of files that are under review
@@ -94,7 +90,6 @@
         
          ?>
 	            <figure>
-	            <div class="masonrywell">
 					<div class="thumbholder">
 	                <?php if (metadata('item', 'has thumbnail')): ?>
 	                    <?php echo link_to_item(item_image('thumbnail', array('alt' => $itemTitle)));
@@ -121,7 +116,6 @@
 	                    <?php echo $itemLoc; ?>
 
 	                </figcaption>
-	            </div>
 	            </figure>
 	            
 	            
@@ -148,9 +142,7 @@
                   ?>   
 	
 	
-</div>
-</div>
-
+	
 	
 	
 	

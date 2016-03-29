@@ -1,78 +1,23 @@
-<?php echo head(array('bodyid'=>'home')); ?>
-<div class="container">
-<?php echo get_theme_option('Homepage About'); ?>
+<?php
+queue_js_file('guest-user-password');
+queue_css_file('skeleton');
+$css = "form > div { clear: both; padding-top: 10px;} .two.columns {width: 30%;} ";
+queue_css_string($css);
+$pageTitle = __('Register');
+echo head(array('bodyclass' => 'register', 'title' => $pageTitle));
+?>
 
-<style>
-
-div.calltoactionbox {
-	background-color:rgba(0,0,0,.7);
-	color:white;
-	width:550px;
-	padding:65px;
-}
-
- div.calltoactionbox a {
-	 color:white;
- }
- 
- div.calltoactionbox .btn {
-	 background-color: #f6a847;
-	 width:80%;
-	 margin: 40px auto 0 auto;
-	 font-weight: bold;
-	 color:#ffffff;
-	 font-size:18px;
- }
-
-div.calltoactionbox h1 {
-	font-family: YaleDesign;
-	font-size:36px;
-	text-align: center;
-	margin-bottom:30px;
-	margin-top:0;
-}
-
-div.calltoactionbox p {
-	font-family: InterstateLight;
-	font-size:14px;
-	text-align: justify;
-}
-
-div.vcenter {
- position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
-
-
-</style>
-
-<div class="container calltoactionbox vcenter">
-    <div class="row">
-        <div class="col-sm-12">                            
-            <h1>Pages to Words.</h1>
-            <p>
-                Help build a digital corpus of text from the world-class collections of Yale University Library. 
-            </p>
-            <a href="<?php echo WEB_ROOT ?>/collections/show/2" class="btn btn-large btn-block btn-fb">Start Transcribing</a> 
-        </div>
-            
-    </div>
-        
-     
-</div>
 
 <script type="text/javascript">         
     jQuery(function($){             
         $.supersized({              
             // Functionality
-            slideshow               :   1,          // Slideshow on/off
-            autoplay                :   1,          // Slideshow starts playing automatically
+            slideshow               :   0,          // Slideshow on/off
+            autoplay                :   0,          // Slideshow starts playing automatically
             start_slide             :   1,          // Start slide (0 is random)
             stop_loop               :   0,          // Pauses slideshow on last slide
             random                  :   0,          // Randomize slide order (Ignores start slide)
-            slide_interval          :   5000,       // Length between transitions
+            slide_interval          :   13000,       // Length between transitions
             transition              :   1,          // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
             transition_speed        :   1000,       // Speed of transition
             new_window              :   0,          // Image links open in new window/tab
@@ -95,11 +40,7 @@ div.vcenter {
             thumb_links             :   1,          // Individual thumb links for each slide
             thumbnail_navigation    :   0,          // Thumbnail navigation
             slides                  :   [           // Slideshow Images
-                                                    {image : '<?php echo img("slideshow_cherokee.jpg"); ?>', title : 'Cherokee Manuscript', alt: 'Cherokee Manuscript'},
-                                                    {image : '<?php echo img("slideshow_starr.jpg"); ?>', title : 'Starr Reading Room', alt: 'Starr Reading Room'},
-                                                    {image : '<?php echo img("slideshow_sterling.jpg"); ?>', title : 'Sterling Memorial Library', alt: 'Sterling Memorial Library'},
-                                                    {image : '<?php echo img("slideshow_beinecke.jpg"); ?>', title : 'Beinecke Rare Book & Manuscript Library', alt: 'Beinecke Rare Book & Manuscript Library'},
-                                                    {image : '<?php echo img("slideshow_gilmore.jpg"); ?>', title : 'Gilmore Music Library', alt: 'Gilmore Music Library'},
+                                                    {image : '<?php echo img("front.jpg"); ?>', title : 'Reading Letters', alt: 'Homepage picture'},
 
                                         ],
 
@@ -110,9 +51,57 @@ div.vcenter {
 
                     
         });
-    });         
-</script>
-<div id="slideshow"></div>
+    });  
 
-</div>
+</script>       
+
+<script>$("#searchbox").remove();</script>
+
+
+<div class="block blur2 section-title">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="clear-form two-col">
+                        <div class="form-heading">
+                            <h3 class="header">Register</h3>
+                            <hr/>
+                        </div>
+                        <div class="col1">  
+                            <?php echo flash(); ?>                          
+                            <?php echo $this->form; ?>                           
+                        </div>  
+                        <div class="col2">
+                          <div class="form-heading">
+                                <h4 class="header">Benefits of registering</h4>                                                        
+                          </div> 
+                          <ul style="margin-left: 30px;">
+                            <li>
+                              Track your transcriptions
+                            </li>
+                            <li>
+                              Views the latest transcriptions from other users
+                            </li>
+                            <li>
+                              Easily connect to recent conversations
+                            </li>
+                            <li>
+                              More features coming soon!
+                            </li>
+                          </ul>
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="slideshow"></div></div> 
+<script>
+  $("#name-label").removeClass( "two columns alpha" );
+  $("#new_password_confirm-label").removeClass( "two columns alpha" );
+  $("#captcha-label").removeClass( "two columns alpha" );
+  $("#submit").addClass("btn btn-large btn-blue btn-block");
+</script>
+
+
 <?php echo foot(); ?>

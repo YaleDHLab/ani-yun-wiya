@@ -39,10 +39,11 @@
 </div>
 
 
-<div id="columns" class="container">
 
-<div class="masonryrow">
-	
+
+<div id="columns">
+        
+            <!-- The following returns all of the files associated with an item. -->
             <?php if (metadata('item', 'has files')): ?>
 
 			    	<?php set_loop_records('files', get_current_record('item')->Files);             
@@ -62,7 +63,6 @@
 			
 ?>
                     	            <figure>
-                    	            <div class="masonrywell">
 										<div class="thumbholder">
 						                    <?php echo '<a href="' . $uri . $file->item_id . '/' . $file->id . '">' . file_image('thumbnail', array('alt' => $fileTitle)) .'</a>';
 							                        $percentNeedsReview = metadata('item', array('Scriptus', 'Percent Needs Review'));
@@ -94,25 +94,14 @@
 						                    <?php echo $itemLoc; ?>
 					
 						                </figcaption>
-                    	            </div>
 					            </figure>
 			            <?php endforeach; ?>       
             <?php endif; ?>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-</div>
-</div>
+            
+
+            
+
+
 </div>
     
     <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>

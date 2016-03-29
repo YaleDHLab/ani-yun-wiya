@@ -11,6 +11,9 @@ Ani-yun-wiya uses a variety of commercial fonts, which must be licensed.  These 
 General Design
 * [Interstate](http://www.webtype.com/font/interstate-family/)
 
+Language-specific Fonts
+* Cherokee Syllabary: [Phoreus Cherokee](https://typekit.com/fonts/phoreus-cherokee) See [http://blog.typekit.com/2014/08/05/introducing-phoreus-cherokee-2/] for more info; this font is designed for mixed Cherokee/Latin contexts.
+
 Yale / DHLab Branding
 * [Text](https://www.myfonts.com/fonts/fw-alias/text/)
 * [Yale Typeface](http://www.yale.edu/printer/typeface/)

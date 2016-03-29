@@ -79,10 +79,7 @@
 											 </div>
 										</div>
 										
-					                    <div class="progress item-progress">
-					                        <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $totalPercent;?>"  aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $totalPercent;?>%;"><span class="sr-only"> <?php echo $status; ?></span>
-					                        </div>
-					                    </div>
+					                  
 					          
 					                    
 						                <figcaption>

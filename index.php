@@ -2,51 +2,7 @@
 <div class="container">
 <?php echo get_theme_option('Homepage About'); ?>
 
-<style>
 
-div.calltoactionbox {
-	background-color:rgba(0,0,0,.7);
-	color:white;
-	width:550px;
-	padding:65px;
-}
-
- div.calltoactionbox a {
-	 color:white;
- }
- 
- div.calltoactionbox .btn {
-	 background-color: #f6a847;
-	 width:80%;
-	 margin: 40px auto 0 auto;
-	 font-weight: bold;
-	 color:#ffffff;
-	 font-size:18px;
- }
-
-div.calltoactionbox h1 {
-	font-family: YaleDesign;
-	font-size:36px;
-	text-align: center;
-	margin-bottom:30px;
-	margin-top:0;
-}
-
-div.calltoactionbox p {
-	font-family: InterstateLight;
-	font-size:14px;
-	text-align: justify;
-}
-
-div.vcenter {
- position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
-
-
-</style>
 
 <div class="container calltoactionbox vcenter">
     <div class="row">

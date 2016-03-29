@@ -112,10 +112,6 @@ div#header-dhlabbox-lab {
 	top:-1px;
 }
 
-.navbar li a:hover {
-
-	background-color:#f6a947;
-}
 
 
 .navbar li div.form-group {
@@ -128,12 +124,20 @@ input#query {width:90px;}
 
 .dropdown-menu li, .dropdown-menu li a {
 	font-family: "InterstateRegular";
-	color:black;
+	color:#cccccc;
+	background-color:#464646;
 	font-size:1.125em;
 	height:55px;
 	line-height:55px;
 	text-transform:none;
 }
+
+
+.dropdown-menu li a:hover {
+	color:#ffffff;
+	background-color:#f6a947;
+}
+
 
 @media (min-width: 767px) {
 	.dropdown-menu {
@@ -142,6 +146,7 @@ input#query {width:90px;}
 		width:100%;
 		border: none;
 		border-radius: 0px;
+		padding:0;
 	
 	}
 }

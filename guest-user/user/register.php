@@ -12,12 +12,12 @@ echo head(array('bodyclass' => 'register', 'title' => $pageTitle));
     jQuery(function($){             
         $.supersized({              
             // Functionality
-            slideshow               :   0,          // Slideshow on/off
-            autoplay                :   0,          // Slideshow starts playing automatically
+            slideshow               :   1,          // Slideshow on/off
+            autoplay                :   1,          // Slideshow starts playing automatically
             start_slide             :   1,          // Start slide (0 is random)
             stop_loop               :   0,          // Pauses slideshow on last slide
             random                  :   0,          // Randomize slide order (Ignores start slide)
-            slide_interval          :   13000,       // Length between transitions
+            slide_interval          :   8000,       // Length between transitions
             transition              :   1,          // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
             transition_speed        :   1000,       // Speed of transition
             new_window              :   0,          // Image links open in new window/tab
@@ -40,7 +40,11 @@ echo head(array('bodyclass' => 'register', 'title' => $pageTitle));
             thumb_links             :   1,          // Individual thumb links for each slide
             thumbnail_navigation    :   0,          // Thumbnail navigation
             slides                  :   [           // Slideshow Images
-                                                    {image : '<?php echo img("front.jpg"); ?>', title : 'Reading Letters', alt: 'Homepage picture'},
+                                                    {image : '<?php echo img("slideshow_cherokee.jpg"); ?>', title : 'Cherokee Manuscript', alt: 'Cherokee Manuscript'},
+                                                    {image : '<?php echo img("slideshow_starr.jpg"); ?>', title : 'Starr Reading Room', alt: 'Starr Reading Room'},
+                                                    {image : '<?php echo img("slideshow_sterling.jpg"); ?>', title : 'Sterling Memorial Library', alt: 'Sterling Memorial Library'},
+                                                    {image : '<?php echo img("slideshow_beinecke.jpg"); ?>', title : 'Beinecke Rare Book & Manuscript Library', alt: 'Beinecke Rare Book & Manuscript Library'},
+                                                    {image : '<?php echo img("slideshow_gilmore.jpg"); ?>', title : 'Gilmore Music Library', alt: 'Gilmore Music Library'},
 
                                         ],
 
@@ -51,8 +55,7 @@ echo head(array('bodyclass' => 'register', 'title' => $pageTitle));
 
                     
         });
-    });  
-
+    });         
 </script>       
 
 <script>$("#searchbox").remove();</script>

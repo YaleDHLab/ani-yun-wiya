@@ -10,11 +10,16 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 <style>
 	
-	#transcribebox {
-		font-size:20px;
-		height:200px;
-		max-width:280px;
+	textarea#transcribebox {
+		font-size:14px;
+		height:calc(100vh - 390px);
+
+		resize: none;
+		border-radius: 8px;
+		padding:4px;
 	}
+	
+
 	body.collection2 #transcribebox {
 		font-family: 'phoreuscherokee';
 	}
@@ -24,8 +29,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		padding-right:22px;
 		padding-left:22px;
 		padding-top:12px;
-		
-		height:100vh;
+		height:calc(100vh - 70px);
 		background-color:#ececec;
 	}
 	
@@ -86,9 +90,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		cursor:pointer;
 	}
 	
-	textarea#transcribebox {
-		border-radius: 8px 8px 0 0;
-	}
+
 
 	input#save-button {
 		background-color:#f6a947;
@@ -99,7 +101,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 	</style>
 
-<div class="section-title">    
+<div class="section-title" style="padding:0;">    
 		<div class="transcribeLeft">
 			<div id="transcribeBack">< Back</div>
 		     <h1><?php echo $this->file_title; ?></h1>

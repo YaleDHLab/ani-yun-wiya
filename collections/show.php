@@ -20,6 +20,7 @@
 	div.collectionDesc {
 		margin-top:0;
 		padding-right:10px;
+
 	}
 	div#pageshavebeen {
 		text-align:left;

@@ -74,7 +74,7 @@
 					
 										<div class="hoverMeta"><span class="glyphicon glyphicon-info-sign"></span> <?php
 											if ($status == 'Not Started') { echo $status; }
-											else {echo $totalPercent . '% Transcribed';}
+											else {echo 'Started';}
 											?>
 											 </div>
 										</div>

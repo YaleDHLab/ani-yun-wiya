@@ -103,6 +103,11 @@ div#header-dhlabbox-lab {
 	line-height:55px;
 }
 
+.navbar li a:hover {
+	color:#999;
+	background-color:#fff;
+}
+
 
 .navbar li form {
 	line-height:0;
@@ -126,7 +131,7 @@ input#query {width:90px;}
 	font-family: "InterstateRegular";
 	color:#cccccc;
 	background-color:#464646;
-	font-size:1.125em;
+	font-size:14px;
 	height:55px;
 	line-height:55px;
 	text-transform:none;
@@ -273,20 +278,20 @@ div.collectionTitle {
 
 .collectionTitle h1 {
 	font-family: "YaleDesign";
-	font-size:1.5em;
+	font-size:24px;
 	text-align:right;
-	margin-top:20px;
-	line-height:1.5em;
+	margin-top:50px;
+	line-height:30px;
 
 }
 
 div.collectionDesc {
 	font-family: "InterstateLight";
-	font-size:1.1em;
+	font-size:14px;
 	line-height:1.5em;
-	margin-top:25px;
+	margin-top:50px;
 	padding-right:40px;
-	margin-bottom:20px;
+	margin-bottom:50px;
 }
 
 div#collectionProgress {
@@ -347,11 +352,11 @@ div#columns figcaption {
 	background-color:#ffffff;
 	font-family:InterstateLight;
 	font-size:12px;
-	line-height: normal;
+	line-height: 1.25em;
 }
 
 div#columns figcaption h3, div#columns figcaption h3 a {
-	font-family: InterstateBold;
+	font-family: InterstateRegular;
 	font-size:16px;
 	margin-top:0;
 	color:#666666;
@@ -555,6 +560,9 @@ div.yul-wordmark span.yul-wordmark-italic {
 @font-face {font-family: 'InterstateLightCondensed';src: url('fonts/Interstate-LightCondensed.eot');src: url('fonts/Interstate-LightCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-LightCondensed.ttf') format('truetype');}
 
 @font-face {font-family: 'InterstateRegular';src: url('fonts/Interstate-Regular.eot');src: url('fonts/Interstate-Regular.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Regular.ttf') format('truetype');}
+
+@font-face {font-family: 'InterstateRegularCondensed';src: url('fonts/Interstate-RegularCondensed.eot');src: url('fonts/Interstate-RegularCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-RegularCondensed.ttf') format('truetype');}
+
 
 @font-face {
   font-family: 'Glyphicons Halflings';

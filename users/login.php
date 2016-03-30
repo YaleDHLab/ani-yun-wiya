@@ -57,7 +57,7 @@ echo head(array('bodyclass' => 'login', 'title' => $pageTitle), $header);
 div.loginbox {
 	background-color:rgba(0,0,0,.7);
 	color:white;
-	width:550px;
+	width:590px;
 	padding:35px;
 }
 
@@ -65,15 +65,18 @@ div.loginbox {
 	 color:white;
  }
  
- div.loginbox .btn {
-	 background-color: #d7d7d7;
-	 width:80%;
-	 margin: 40px auto 0 auto;
-	 font-weight: bold;
-	 color:#666666;
-	 font-size:18px;
+div.loginbox .btn {
+	background-color: #d7d7d7;
+	width:80%;
+	margin: 40px auto 0 auto;
+	font-weight: bold;
+	color:#666666;
+	font-size:18px;
+}
 
-	
+ div.loginbox .btn:hover {
+	 background-color:#f6a947;
+	 color:white;
  }
 
 div.loginbox .form-control {
@@ -97,9 +100,11 @@ div.loginbox p {
 	text-align: justify;
 }
 #remember {
-
 margin-top:2px;
+}
 
+label#rememberMe {
+	color:#999;
 }
 
 #forgot {
@@ -168,7 +173,7 @@ div.vcenter {
 							<input type="text" class="form-control" name="username" placeholder="Username">
 							<input type="password" class="form-control" name="password" placeholder="Password">
 							<div class="checkbox">
-								<label> 
+								<label id="rememberMe"> 
 								<input type="checkbox" name="remember" id="remember" value="1">
 								Remember me</label><a id="forgot" href="<?php echo WEB_ROOT ?>/users/forgot-password">Forgot password?</a> 
 							</div>
@@ -188,7 +193,7 @@ div.vcenter {
 			<a href="<?php echo WEB_ROOT ?>/guest-user/user/register" class="btn btn-large btn-block btn-fb">Sign Up</a>
 		</div>
 		<div class="col-sm-6" style="padding-left:30px;">
-			<input type="submit" name="submit" id="submit" form="login-form" class="btn btn-large btn-blue btn-block" value="Sign In">
+			<input type="submit" name="submit" id="submit" form="login-form" class="btn btn-large btn-blue btn-block" value="Log In">
 		</div>
 	</div>
 </div>

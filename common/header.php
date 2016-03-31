@@ -52,69 +52,61 @@
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    <header role="banner">
-		<nav class="navbar">
-		  <div class="container-fluid">
-			  <div class="row">
-			    <div class="navbar-header" role="navigation">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#transcribeNavbar">
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>                        
-						</button>
-						
-						<div id="header-allbox" class="pull-left">
-							<div id="header-dhlabbox">
-							    <div id="header-dhlabbox-dh">DH</div>
-							    <div id="header-dhlabbox-lab">Lab</div>
-							</div>
-							<div id="header-transcribebox" >
-							    <?php echo link_to_home_page("Transcribe"); ?>
-							</div>
-							
-						</div>
+    
+<nav class="navbar navbar-default">
+  <div class="container-fluid" >
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+		<div id="header-allbox">
+			<div id="header-dhlabbox">
+			    <div id="header-dhlabbox-dh">DH</div>
+			    <div id="header-dhlabbox-lab">Lab</div>
+			</div>
+			<div id="header-transcribebox" >
+			    <?php echo link_to_home_page("Transcribe"); ?>
+			</div>
+		</div>
+    </div>
 
-						</div>
-					    <div class="collapse navbar-collapse" id="transcribeNavbar">
-					      <ul class="nav nav-justified">
-					        <li class="dropdown">
-					          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Collections&nbsp;<span class="caret"></span></a>
-					          <ul class="dropdown-menu">
-					            <li><a href="<?php echo WEB_ROOT; ?>/collections/show/2">Cherokee</a></li>
-		
-					          </ul>
-					        </li>
-					        <li><a href="<?php echo WEB_ROOT; ?>/about">About</a></li>
-<!-- 					        <li><a href="#">Dashboard</a></li> -->
-					        <li>
-					        <?php if (!current_user()) { ?>
-					        	<a href="<?php echo WEB_ROOT; ?>/guest-user/user/login">Login</a>
-					        <?php }; ?>
-					        <?php if (current_user()) { ?>
-					        	<a href="<?php echo WEB_ROOT; ?>/users/logout">Logout</a>
-					        <?php }; ?>
-					        </li>
-					        <li>
-						        <div  class="navbar-form" >
-									<?php echo search_form(array('show_advanced' => false, 'submit_value' => 'I Feel Lucky')); ?>
-								</div>
-					        </li>
-			
-					      </ul>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse"  id="transcribeNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collections <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+	         <li><a href="<?php echo WEB_ROOT; ?>/collections/show/2">Cherokee</a></li>
+          </ul>
+        </li>
+        <li><a href="<?php echo WEB_ROOT; ?>/about">About</a></li>
+        <li>
+		<?php if (!current_user()) { ?>
+		<a href="<?php echo WEB_ROOT; ?>/guest-user/user/login">Login</a>
+		<?php }; ?>
+		<?php if (current_user()) { ?>
+		<a href="<?php echo WEB_ROOT; ?>/users/logout">Logout</a>
+		<?php }; ?>
+		</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+	      <form class="navbar-form navbar-left" role="search">
+	        <div class="form-group">
+	          <?php echo search_form(array('show_advanced' => false, 'submit_value' => 'I Feel Lucky')); ?>
+	        </div>
+	        
+	      </form>
+      </ul>
 
-					    </div>
-			  </div>
-			  </div>
-			  
-		</nav>	    
-	    
-<!--
-        <div class="container" >
 
-            <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>            
-        </div>
--->
-    </header>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
     <main id="content" role="main">
     
           <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>

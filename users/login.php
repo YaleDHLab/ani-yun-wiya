@@ -1,5 +1,4 @@
 <?php
-
 $pageTitle = __('Log In');
 echo head(array('bodyclass' => 'login', 'title' => $pageTitle), $header);
 ?>

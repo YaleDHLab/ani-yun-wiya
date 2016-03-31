@@ -84,18 +84,24 @@ div#header-dhlabbox-lab {
 	z-index: 1;
 }
 
+.navbar-default .navbar-nav>li>a {
+	color:black;
+	padding-top:10px;
 
+}
 .navbar li, .navbar li a {
-	font-family: "InterstateBoldCondensed";
+	font-family: "InterstateRegularCondensed";
 	color:black;
 	font-size:1.125em;
 	text-transform: uppercase;
 	height:70px;
 	line-height:55px;
+	margin-right:15px;
+	margin-left:15px;
 }
 
 .navbar li, .navbar li a {
-	font-family: "InterstateBoldCondensed";
+	font-family: "InterstateRegularCondensed";
 	color:black;
 	font-size:1.125em;
 	text-transform: uppercase;
@@ -107,7 +113,9 @@ div#header-dhlabbox-lab {
 	color:#999;
 	background-color:#fff;
 }
-
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+	background-color: #fff;
+}
 
 .navbar li form {
 	line-height:0;
@@ -135,24 +143,36 @@ input#query {width:90px;}
 	height:55px;
 	line-height:55px;
 	text-transform:none;
+	margin:0;
 }
 
-
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus
+{background-color:#fff;}
 .dropdown-menu li a:hover {
 	color:#ffffff;
 	background-color:#f6a947;
 }
 
 
-@media (min-width: 767px) {
+@media (min-width: 798px) {
 	.dropdown-menu {
-
 		margin: 0;
 		width:100%;
 		border: none;
 		border-radius: 0px;
 		padding:0;
+	}
 	
+	nav div.container-fluid {
+	padding-left: 0;
+
+	}
+
+}
+
+@media (max-width: 798px) {
+		div#footerPOTYDHL {
+		display:none;
 	}
 }
 	
@@ -213,15 +233,6 @@ body.simple-page div.row {
 }
 
 
-/* Collapsing / deleting items at very small screen sizes */
-
-@media (max-width: 767px) {
-		div#footerPOTYDHL {
-			display:none;
-		}
-	}
-	
-	
 
 /* FOOTER STUFF */
 
@@ -248,16 +259,21 @@ footer {
 	position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 120px;
-  padding-top:45px;
-	
 }
+
+div#footersection {
+position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+div#footersection div.row {
+	margin-right:50px;
+}
+
 
 div#footerPOTYDHL {
 	font-family:InterstateLightCondensed; font-size:16px;
-	text-align:right;
-	padding-right:70px;
+	margin-right:20px;
 }
 
 

@@ -3,7 +3,7 @@
 
 
 <footer class="footer">
-	<div class="section-title">
+	<div id="footersection">
 		<div class="collectionTitle">
 			<div class="yul-wordmark">
 				<table>
@@ -20,7 +20,7 @@
 		</div>
 		<div class="main">
 			<div class="container-fluid">
-				<div id="footerPOTYDHL">
+				<div id="footerPOTYDHL" class="navbar-right">
 						An experiment of the Yale Digital Humanities Lab
 				</div>
 			</div>

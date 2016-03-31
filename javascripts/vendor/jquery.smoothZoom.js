@@ -566,7 +566,10 @@
 			}
 
 			//offset for right sidebar. comment out if sidebar is removed. see line 120 in component.css
-			hVal = 150;
+			hVal = 10;
+			hProp = 'left';
+			vProp = 'top';
+			vVal =  10;
 
 			//Buttons Container		
 			$controls = $(

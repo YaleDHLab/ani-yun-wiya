@@ -13,7 +13,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	textarea#transcribebox {
 		font-size:14px;
 		height:calc(100vh - 390px);
-
+		margin-top:-10px;
 		resize: none;
 		border-radius: 8px;
 		padding:4px;
@@ -30,7 +30,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		padding-left:22px;
 		padding-top:12px;
 		height:calc(100vh - 70px);
-		background-color:#ececec;
+		background-color:#fff;
 	}
 	
 	div.transcribeLeft h1 {
@@ -84,6 +84,9 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		padding-left:22px;
 		padding-top:24px;
 		color:#999999;
+		background-color:#fff;
+		
+
 	}
 	
 	div#transcribePageNav a {
@@ -96,7 +99,16 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		background-color:#f6a947;
 		color:white;
 		border:none;
+		width:30%;
+		position:relative;
+		float:right;
+		margin-bottom:0;
+		top:-25px;
 	}	
+	
+	dt#transcribebox-label {
+		display:none;
+	}
 
 
 	</style>
@@ -123,7 +135,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 			   		<div id="transcribePageNav">
 				   		  
 						<?php if (isset($this->paginationUrls['prev'])): ?>
-							<a onClick="parent.location='<?php echo html_escape($this->paginationUrls['prev']); ?>'">< Prev</a>
+							<a onClick="goBack()">< Prev</a>
 						<?php else: ?>
 							< Prev
 						<?php endif; ?>
@@ -133,10 +145,10 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 							<a onClick="parent.location='<?php echo html_escape($this->paginationUrls['next']); ?>'">Next ></a>
 						<?php else: ?>
 							Next >
-						<?php endif; ?>			   		
+						<?php endif; ?>	
+								   		
 			   		</div>
-					<?php echo $this->form; 				
-					?>
+				<?php echo $this->form; ?>	
 
 
 
@@ -189,9 +201,19 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="../../plugins/Scriptus/views/public/javascripts/classie.js"></script>
 		<script>
+			
+				var textHasChanged;
+			
+					var goBack = function() {
+						if(textHasChanged) {alert('but something has changed!')}
+					parent.location='<?php if (isset($this->paginationUrls['prev'])){ echo html_escape($this->paginationUrls['prev']);} ?>;';
+					}
 
 			//Loads discuss tab if user navigated from recent comments page. discussOpen is the URL parameter used for this purpose
 			$(document).ready(function(){
+
+
+		
 				var URL = document.URL;
 				var URLArray = URL.split("?");
 				if (URLArray){
@@ -205,13 +227,18 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 			});
 
 			jQuery(function($){
+			
+
 				$('#ImageID').smoothZoom({
 					width: '100%',
 					height: ($(window).height()-70),
 					responsive: true,
 					zoom_MAX: 200
 				});
-
+				
+				$("#transcribebox").on('change keyup paste', function() {
+					textHasChanged = true });
+				
 				$('form').submit(function(event) {
 
 						// get the form data				

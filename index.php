@@ -11,7 +11,7 @@
         <div class="col-sm-12">                            
             <h1>Pages to Words.</h1>
             <p>
-                Help build a digital corpus of text from the world-class collections of Yale University Library. 
+                Help transcribe Cherokee handwriting to build a corpus of text that is legible, searchable, and open to support education and research. 
             </p>
             <a href="<?php echo WEB_ROOT ?>/collections/show/2" class="btn btn-large btn-block btn-fb">Start Transcribing</a> 
         </div>

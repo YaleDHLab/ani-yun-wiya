@@ -57,7 +57,7 @@
   <div class="container-fluid" >
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#transcribeNavbar" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -93,14 +93,24 @@
 		<?php }; ?>
 		</li>
       </ul>
+<!--
+       <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" style="width:120px;" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+-->
+<!--
       <ul class="nav navbar-nav navbar-right">
-	      <form class="navbar-form navbar-left" role="search">
+	      <li>
 	        <div class="form-group">
 	          <?php echo search_form(array('show_advanced' => false, 'submit_value' => 'I Feel Lucky')); ?>
 	        </div>
 	        
-	      </form>
+	      </li>
       </ul>
+-->
 
 
     </div><!-- /.navbar-collapse -->

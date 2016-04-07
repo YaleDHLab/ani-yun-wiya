@@ -1,9 +1,7 @@
 <?php echo head(array('bodyid'=>'home')); ?>
 <div class="container">
 <?php echo get_theme_option('Homepage About'); ?>
-<style>
 
-</style>
 
 
 <div class="container calltoactionbox vcenter">

@@ -173,82 +173,7 @@ input#query {width:120px;}
 }
 
 
-@media (min-width: 830px) {
-	.dropdown-menu {
-		top:70px;
-		margin: 0;
-		width:100%;
-		border: none;
-		border-radius: 0px;
-		padding:0;
-	}
-	
-	nav div.container-fluid {
-	padding-left: 0;
 
-	}
-
-}
-
-@media (min-width:374px) {
-	div#header-allbox {
-	width:300px;
-	}
-	div#header-transcribebox {
-	width:230px;
-	}
-
-.navbar .navbar-toggle .icon-bar {
-	background-color:white;
-	}
-	
-.navbar .navbar-toggle {
-	border-color:white;
-}
-
-
-}
-
-
-@media (min-width:319px) {
-
-	div#header-allbox {
-	background-color:#f6a947;
-	}
-	div#header-transcribebox {
-	width:190px;
-	font-size:2.2em;
-	}
-
-.navbar .navbar-toggle .icon-bar {
-	background-color:white;
-	}
-	
-.navbar .navbar-toggle {
-	border-color:white;
-}
-}
-
-@media (min-width:374px) {
-
-	div#header-allbox {
-	background-color:#f6a947;
-	width:100%;
-	}
-	div#header-transcribebox {
-	width:190px;
-	
-	}
-
-}
-
-
-
-@media (max-width: 798px) {
-		div#footerPOTYDHL {
-		display:none;
-	}
-}
 	
 .navbar-toggle {margin-top:18px;}
 
@@ -596,18 +521,93 @@ div.yul-wordmark span.yul-wordmark-smallcap {
 div.yul-wordmark span.yul-wordmark-yale {
     font-family: 'YaleDesign', Georgia, "Times New Roman", Times, serif;
     font-size: 26px;
-   
-
 }
 
 div.yul-wordmark span.yul-wordmark-italic {
     font-family: 'YaleDesign', Georgia, "Times New Roman", Times, serif;
 	font-style:italic;
-
 	font-size:17px;
+}
+
+
+/* MOBILE */
+
+@media (min-width: 829px) {
+	.dropdown-menu {
+		top:70px;
+		margin: 0;
+		width:100%;
+		border: none;
+		border-radius: 0px;
+		padding:0;
+	}
+	
+	nav div.container-fluid {
+	padding-left: 0;
+
+	}
 
 }
 
+@media (max-width:500px) {
+	div.calltoactionbox {
+	padding:15px;
+	}
+}
+
+@media (max-width:376px) {
+	div#header-allbox {
+	width:300px;
+	}
+	div#header-transcribebox {
+	width:230px;
+	}
+
+
+
+
+}
+
+
+@media (max-width:321px) {
+
+	div#header-allbox {
+	background-color:#f6a947;
+	}
+	div#header-transcribebox {
+	width:190px;
+	font-size:2.2em;
+	}
+
+	.navbar .navbar-toggle .icon-bar {
+	background-color:white;
+	}
+	
+	.navbar .navbar-toggle {
+	border-color:white;
+	}
+}
+
+@media (max-width:374px) {
+
+	div#header-allbox {
+	background-color:#f6a947;
+	width:100%;
+	}
+	div#header-transcribebox {
+	width:190px;
+	
+	}
+
+}
+
+
+
+@media (max-width: 798px) {
+		div#footerPOTYDHL {
+		display:none;
+	}
+}
 
 
 @font-face {

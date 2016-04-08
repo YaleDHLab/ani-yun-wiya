@@ -185,7 +185,29 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		           <img id="ImageID" src="<?php echo $this->imageUrl; ?>" alt=''/>
 		        </div>
 		    </div>
-		</div>
+
+
+		    <!-- Modal that can be served if a user navigates away from the form with unsaved content -->
+		    <div id="saveChangesModal" class="modal fade">
+			<div class="modal-dialog">
+			    <div class="modal-content">
+				<div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				    <h4 class="modal-title">Confirmation</h4>
+				</div>
+				<div class="modal-body">
+				    <p>Do you want to save the changes you made before leaving?</p>
+				    <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+				</div>
+				<div class="modal-footer">
+				    <button type="button" class="btn btn-default" data-dismiss="modal" id="doNotSaveChangesButton">Close</button>
+				    <button type="button" class="btn btn-primary" id="saveChangesButton">Save changes</button>
+				</div>
+			    </div>
+			</div>
+		    </div>
+
+		</div> <!-- /.main -->
 </div>
 
 
@@ -202,18 +224,15 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		<script src="../../plugins/Scriptus/views/public/javascripts/classie.js"></script>
 		<script>
 			
-				var textHasChanged;
-			
-					var goBack = function() {
-						if(textHasChanged) {alert('but something has changed!')}
-					parent.location='<?php if (isset($this->paginationUrls['prev'])){ echo html_escape($this->paginationUrls['prev']);} ?>;';
-					}
-
 			//Loads discuss tab if user navigated from recent comments page. discussOpen is the URL parameter used for this purpose
 			$(document).ready(function(){
-
-
-		
+				var textHasChanged;
+			
+				var goBack = function() {
+					if(textHasChanged) {alert('but something has changed!')}
+				parent.location='<?php if (isset($this->paginationUrls['prev'])){ echo html_escape($this->paginationUrls['prev']);} ?>;';
+				}
+	
 				var URL = document.URL;
 				var URLArray = URL.split("?");
 				if (URLArray){
@@ -227,7 +246,17 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 			});
 
 			jQuery(function($){
-			
+
+				// create a function we'll call if a user leaves the page		
+				$(window).on('beforeunload', function() {
+					if(textHasChanged) {
+						return 'Your changes are unsaved.';
+						// note: modal will not interrupt the transfer of control to another page
+						//$('#saveChangesModal').modal();
+					};
+
+				});
+	
 
 				$('#ImageID').smoothZoom({
 					width: '100%',
@@ -237,7 +266,8 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 				});
 				
 				$("#transcribebox").on('change keyup paste', function() {
-					textHasChanged = true });
+					textHasChanged = true;
+				 });
 				
 				$('form').submit(function(event) {
 
@@ -289,6 +319,8 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 					};
 
 					$('#save-button').click(function(){
+					  // reset the global variable that identifies whether there are unsaved changes on the page
+					  textHasChanged = false;
 					  var btn = $(this);
 					  
 					  btn.button("loading");
@@ -310,6 +342,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 			
 
 		</script>
+
 <?php echo foot(); ?>
 
 

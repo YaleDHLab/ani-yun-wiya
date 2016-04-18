@@ -12,7 +12,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 	textarea#transcribebox {
 		font-size:14px;
-		height:calc(100vh - 390px);
+		height:calc(100vh - 360px);
 		margin-top:-10px;
 		resize: none;
 		border-radius: 8px;
@@ -115,7 +115,8 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 <div class="section-title" style="padding:0;">    
 		<div class="transcribeLeft">
-			<div id="transcribeBack">< Back</div>
+			<div id="transcribeBack"><?php echo $this->back_link;
+				 ?></div>
 		     <h1><?php echo $this->file_title; ?></h1>
 		     <h2><?php echo $this->item_link; ?></h2>
 			 <h2><?php echo $this->collection_link; ?></h2>
@@ -135,7 +136,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 			   		<div id="transcribePageNav">
 				   		  
 						<?php if (isset($this->paginationUrls['prev'])): ?>
-							<a onClick="goBack()">< Prev</a>
+							<a onClick="parent.location='<?php echo html_escape($this->paginationUrls['prev']); ?>'">< Prev</a>
 						<?php else: ?>
 							< Prev
 						<?php endif; ?>
@@ -226,13 +227,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 			
 			//Loads discuss tab if user navigated from recent comments page. discussOpen is the URL parameter used for this purpose
 			$(document).ready(function(){
-				var textHasChanged;
-			
-				var goBack = function() {
-					if(textHasChanged) {alert('but something has changed!')}
-				parent.location='<?php if (isset($this->paginationUrls['prev'])){ echo html_escape($this->paginationUrls['prev']);} ?>;';
-				}
-	
+		
 				var URL = document.URL;
 				var URLArray = URL.split("?");
 				if (URLArray){

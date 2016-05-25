@@ -1,6 +1,6 @@
 <?php
     $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 'Title')));
-    $collectionDesc  = strip_formatting(metadata('collection', array('Dublin Core', 'Description')));
+    $collectionDesc  = metadata('collection', array('Dublin Core', 'Description'));
     echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show'));
 ?>
 

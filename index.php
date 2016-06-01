@@ -9,7 +9,7 @@
         <div class="col-sm-12">                            
             <h1>Pages to Words.</h1>
             <p>
-                Help transcribe Cherokee handwriting to build a corpus of text that is legible, searchable, and open to support education and research. 
+                Help transcribe Native language manuscripts to build a corpus of text that is legible, searchable, and open to support education and research. 
             </p>
             <a href="<?php echo WEB_ROOT ?>/collections/show/2" class="btn btn-large btn-block btn-fb">Start Transcribing</a> 
         </div>

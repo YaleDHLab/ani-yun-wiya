@@ -91,7 +91,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collections <span class="caret"></span></a>
           <ul class="dropdown-menu">
 	         <li><a href="<?php echo WEB_ROOT; ?>/collections/show/2">Cherokee</a></li>
-	         <li><a href="<?php echo WEB_ROOT; ?>/collections/show/3">Micmac</a></li>
+	         <li><a href="<?php echo WEB_ROOT; ?>/collections/show/3">Mi’kmaw</a></li>
           </ul>
           
           

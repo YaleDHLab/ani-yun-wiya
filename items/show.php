@@ -1,5 +1,6 @@
 <?php 
 	$itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title')));
+    $itemDesc  = metadata('item', array('Dublin Core', 'Description'));
 	if ($itemTitle == '') {
 	    $itemTitle = __('[Untitled]');
 	}
@@ -22,6 +23,32 @@
 
 ?>
 
+<style>
+	
+	.collectionTitle h1, div.collectionDesc {
+			margin-top:20px;
+	}
+
+@media (max-width: 767px) {
+	.main {
+	padding-left: 0;
+	}
+	div.collectionTitle {
+	width:100%;
+
+	padding-left:15px;
+	}
+	.collectionTitle h1 {
+	text-align:left;
+
+	}
+	div.collectionDesc {
+		margin-top:0;
+		padding-right:10px;
+
+	}
+}
+</style>
 
 <div class="section-title">    
 	<div class="row">
@@ -34,6 +61,18 @@
 		               echo '<strong>' . $itemTitle . '</strong>';
 		               ?>
 			</h1>
+		</div>
+	</div>
+	<div class="header-gradient">
+		<div class="collectionTitle">
+		     <h1><?php echo $itemTitle; ?></h1>
+		</div>
+		<div class="main">
+		    <div class="container-fluid">
+		        <div class="row-fluid">
+		            <div class="collectionDesc"><?php echo $itemDesc; ?></div>
+		        </div>
+		    </div>
 		</div>
 	</div>
 </div>

@@ -7,6 +7,28 @@
     <?php if ( $description = option('description')): ?>
         <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Transcribe"/>
+	<meta name="msapplication-TileColor" content="#000000" />
+	<meta name="msapplication-TileImage" content="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="http://transcribe.library.yale.edu/projects/themes/ani-yun-wiya/images/favicons/mstile-310x310.png" />
+
+
 
     <!-- Will build the page <title> -->
     <?php

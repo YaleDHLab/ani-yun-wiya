@@ -210,23 +210,21 @@ div.vcenter {
 		<div class="col-sm-6" style="padding-left:30px;">
 			<div class="form-heading">
 				<h4 class="header">
-					Why register?
+					Important Info
 				</h4>
 			</div>
 		
 			<ul>
+				                            <li>
+                              No Yale affiliation is required.
+                            </li>
 			   <li>
-                              Track your transcriptions
+                              The transcriptions you contribute will be licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-0 »</a>.
+
                             </li>
-                            <li>
-                              Views the latest transcriptions from other users
-                            </li>
-                            <li>
-                              Easily connect to recent conversations
-                            </li>
-                            <li>
-                              More features coming soon!
-                            </li>
+
+
+              
                           </ul>
 			
 		</div>

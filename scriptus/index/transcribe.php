@@ -121,7 +121,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		     <h2><?php echo $this->item_link; ?></h2>
 			 <h2><?php echo $this->collection_link; ?></h2>
 			 <h2><?php echo $this->location; ?></h2>
-			 <h2>More info »</h2>
+			 <h2 style="font-style: italic;">Transcriptions licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-0 »</a></h2>
 	   		
 
 	   		<ul class="nav nav-tabs" role="tablist" style="margin-bottom:0;margin-top:25px;margin-left:-22px;padding-left:22px;margin-right:-22px;">
@@ -150,7 +150,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 								   		
 			   		</div>
 				<?php echo $this->form; ?>	
-
+ 
 
 
 				</div>

@@ -1,5 +1,7 @@
 // Add your custom CSS here
 
+
+
 img {
     max-width: 100%;
 }
@@ -233,7 +235,11 @@ body.simple-page div.row {
 html {
   position: relative;
   min-height: 100%;
+
+  touch-action: manipulation;
+  content-zooming:none;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 120px;

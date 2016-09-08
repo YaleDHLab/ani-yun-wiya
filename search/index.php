@@ -45,7 +45,7 @@
 		<div class="main">
 		    <div class="container-fluid">
 		        <div class="row-fluid">
-		            <div class="collectionDesc">Found <?php echo $total_results; ?> instances of <?php echo htmlspecialchars($_GET["query"]) . ".";?></div>
+		            <div class="collectionDesc"><p>Found <?php echo $total_results; ?> instances of <?php echo htmlspecialchars($_GET["query"]) . ".</p><p>All transcriptions are licensed under a Creative Commons License (<a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\">CC-0</a>); please feel free to use the texts in your own research and/or teaching.";?></div>
 		        </div>
 		    </div>
 		</div>

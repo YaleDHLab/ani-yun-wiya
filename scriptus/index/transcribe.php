@@ -19,10 +19,18 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		padding:4px;
 	}
 	
-
+/* 	Custom Phoreus Cherokee font for Collection ID #2, Kilpatrick Cherokee */
 	body.collection2 #transcribebox {
 		font-family: 'phoreuscherokee';
 	}
+
+/* 	Custom Ro Nikkatsu Sei Kai Std font for Collection ID #4, Asakawa */
+	body.collection4 #transcribebox {
+		font-family: 'tk-ro-nikkatsu-sei-kai-std';
+	}
+
+	
+	
 	div.transcribeLeft {
 		width:330px;
 		float:left; 

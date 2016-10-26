@@ -176,11 +176,11 @@ a.dropdown-toggle {white-space: nowrap;}
 /* Home Page styles */
 
 div.calltoactionbox {
-	background-color:rgba(0,0,0,.7);
+	background-color:rgba(0,0,0,.65);
 	color:white;
 	width:80%;
-	max-width:550px;
-	padding:65px;
+	max-width:520px;
+	padding:48px;
 	z-index: 50;
 }
 
@@ -190,7 +190,7 @@ div.calltoactionbox {
  
  div.calltoactionbox .btn {
 	 background-color: #f6a847;
-	 width:80%;
+	 width:50%;
 	 margin: 40px auto 0 auto;
 	 font-weight: bold;
 	 color:#ffffff;

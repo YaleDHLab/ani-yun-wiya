@@ -7,7 +7,7 @@
 <div class="container calltoactionbox vcenter">
     <div class="row">
         <div class="col-sm-12">                            
-            <h1>Pages to Words.</h1>
+            <h1>Pages to Words</h1>
             <p>
 	   
                 Help transcribe Native language manuscripts to build a corpus of text that is legible, searchable, and open to support education and research. 
